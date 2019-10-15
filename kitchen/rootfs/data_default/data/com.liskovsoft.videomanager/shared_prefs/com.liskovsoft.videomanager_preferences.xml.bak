@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="last_recovered" value="1570966186339" />
+    <int name="playback_working_key" value="0" />
+    <boolean name="last_paused" value="false" />
+    <string name="bootstrapSelectedLanguage">id</string>
+    <boolean name="is_app_just_installed" value="false" />
+    <int name="previous_app_version_code" value="742" />
+    <boolean name="bgsync_launch_next_online" value="false" />
+    <string name="bootstrapActivityName">com.liskovsoft.smartyoutubetv.flavors.exoplayer.SmartYouTubeTV4K</string>
+</map>

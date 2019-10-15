@@ -1,0 +1,4 @@
+*.img binary
+*.apk binary
+*.7z.* binary
+

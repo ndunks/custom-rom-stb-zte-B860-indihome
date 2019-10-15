@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="enabled" value="true" />
+    <string name="min_interval">180</string>
+    <long name="last_checked" value="1570966193045" />
+</map>
