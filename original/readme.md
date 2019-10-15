@@ -3,6 +3,10 @@ ROM ORIGINAL STB INDIHOME 4K ZTE B860H
 RAM: 2GB
 
 Dibackup menggunakan script `dump.sh`
+
+system.img di split menjadi `system.7z.*` karena limit filesize dari github.
+
+
 ```
 ro.build.id=MHC19J
 ro.build.display.id=MHC19J release-keys
