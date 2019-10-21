@@ -9,3 +9,7 @@ Bahan untuk build custom ROM Android untuk STB Indihome B860H
 - [x] ADB Running via Wifi (Just adb connect IP)
 - [ ] Youtube (Gapps) 
 - [ ] BootLogo Changer 'mklogo' binnary may can be used
+
+BUG
+
+- Menu settings wifi tidak muncul

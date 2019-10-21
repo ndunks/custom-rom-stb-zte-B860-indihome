@@ -28,8 +28,8 @@ rm -f $SYSDIR/app/FactoryTestTool.apk
 rm -f $SYSDIR/app/iptvclient_boot-release.apk
 rm -f $SYSDIR/app/popup-release-signed.apk
 rm -f $SYSDIR/app/ZTEUpgrade.apk
-# rm -f $SYSDIR/app/ZTEBrowser.apk
-# rm -f $SYSDIR/app/ZTEPlayer.apk
+#rm -f $SYSDIR/app/ZTEBrowser.apk
+#rm -f $SYSDIR/app/ZTEPlayer.apk
 
 rm -f $SYSDIR/app/VideoTestTool.apk
 rm -rf $SYSDIR/app/QuickSearchBox
@@ -62,13 +62,14 @@ rm -f $SYSDIR/app/TVClient.apk
 rm -rf $SYSDIR/app/ADBSetting
 rm -rf $SYSDIR/app/Camera2
 rm -rf $SYSDIR/app/Music
-rm -f $SYSDIR/app/com.google.android.tts-3.10.10-210310101.apk
+rm -rf $SYSDIR/app/DownloadProviderUi
+#rm -f $SYSDIR/app/com.google.android.tts-3.10.10-210310101.apk
 rm -rf $SYSDIR/priv-app/Contacts/
 rm -rf $SYSDIR/priv-app/LiveTv/
 
 echo "Remove Unwanted services"
-rm -f $SYSDIR/bin/netaccess
-rm -f $SYSDIR/bin/depconfig
+# rm -f $SYSDIR/bin/netaccess
+# rm -f $SYSDIR/bin/depconfig
 
 # default wallapeper
 rm -f $SYSDIR/etc/default_wallpaper.jpg
