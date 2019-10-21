@@ -68,8 +68,8 @@ rm -rf $SYSDIR/priv-app/Contacts/
 rm -rf $SYSDIR/priv-app/LiveTv/
 
 echo "Remove Unwanted services"
-# rm -f $SYSDIR/bin/netaccess
-# rm -f $SYSDIR/bin/depconfig
+rm -f $SYSDIR/bin/netaccess
+#rm -f $SYSDIR/bin/depconfig
 
 # default wallapeper
 rm -f $SYSDIR/etc/default_wallpaper.jpg

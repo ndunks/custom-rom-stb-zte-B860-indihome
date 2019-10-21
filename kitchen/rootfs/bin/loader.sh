@@ -10,28 +10,12 @@ fi
 MARK=/data/local/KLAMPOK_SCRIPT_DONE
 
 if [ ! -e $MARK ]; then
-	# Enable install FDisk
-	settings put secure install_non_market_apps 1
-	TOAST="am broadcast -a id.klampok.broadcast.CUSTOM_BROADCAST -e MSG "
+	mkdir -p /data/data/eu.chainfire.supersu/files
+	cp /system/supersu.cfg /data/data/eu.chainfire.supersu/files/
+	chmod 700 /data/data/eu.chainfire.supersu/files/supersu.cfg
 
-	# Install custom APK
-	find /system/app_install/ -name "*\.apk" -exec sh -c '$1 "Memasang $(basename $0 .apk)"; pm install $0' {} "$TOAST" \;
+	( /system/bin/app_installer.sh; touch $MARK ) &
 
-	# Data configuration
-	cp -pr /system/data_default/* /data/
-
-	$TOAST "Pemasangan selesai, refreshing.."
-
-	# Give some delay for launcer to receive broadcast
-	sleep 1
-
-	# Kill app to force reload modified data/config
-	for f in /system/data_default/data/*/; do
-		killall $(basename $f)
-	done
-
-	# Bikin tanda aja
-	touch $MARK
 fi
 
 # Aktifkan SuperUser Kernel Module & Daemon
