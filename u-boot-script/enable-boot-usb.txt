@@ -1,0 +1,7 @@
+setenv switch_bootmode run start_autoscript\; ${switch_bootmode}
+setenv start_autoscript 'if usb start; then run start_usb_autoscript; fi; if mmcinfo; then run start_mmc_autoscript; fi; run bootcmd'
+setenv start_mmc_autoscript 'if fatload mmc 0 1020000 s905_autoscript; then autoscr 1020000; fi;'
+setenv start_usb_autoscript 'for usbdev in 0 1 2 3; do if fatload usb ${usbdev} 1020000 s905_autoscript; then autoscr 1020000; fi; done'
+setenv upgrade_step 2
+saveenv
+sleep 1
