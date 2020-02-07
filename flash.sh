@@ -1,5 +1,5 @@
 #!/bin/bash
-UPDATEBIN="./update"
+UPDATEBIN="./tools/linux/update"
 $UPDATEBIN scan | grep 'No ' && exit 1
 
 echo "FLASHING"

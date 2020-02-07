@@ -1,9 +1,10 @@
 #!/bin/bash
-UPDATEBIN="../update"
+UPDATEBIN="../tools/linux/update"
 $UPDATEBIN scan | grep 'No ' && exit 1
 
 echo "FLASHING"
 [ -e boot.img ] && $UPDATEBIN partition boot boot.img
+[ -e bootloader.img ] && $UPDATEBIN partition bootloader bootloader.img
 [ -e conf.img ] && $UPDATEBIN partition conf conf.img
 [ -e logo.img ] && $UPDATEBIN partition logo logo.img
 [ -e env.img ] && $UPDATEBIN partition env env.img
