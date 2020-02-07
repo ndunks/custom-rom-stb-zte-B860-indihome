@@ -1,3 +1,3 @@
 #!/bin/bash
 
-abootimg -x boot.img
+abootimg -x ../original/boot.img
