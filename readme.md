@@ -33,7 +33,7 @@ enable-boot-usb.scr
 ENABLE USB-BOOT
 =================
 ``` bash
-ADDR=0x20000000
+ADDR=0x1020000
 ./tools/linux/update write u-boot-script/enable-boot-usb.scr $ADDR
 ./tools/linux/update bulkcmd "autoscr $ADDR"
 
@@ -251,4 +251,3 @@ eMMC Layout
   12: system                      46100000          6cc00000                  1
   13: data                        b2e00000         11f200000                  4
   ```
-  
