@@ -24,14 +24,9 @@ mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
 enable-boot-usb.scr
 ```
 
+that script will ENABLE USB-BOOT via Amlogic autoscript
+
 ### Load and Execute via USB Burning Tool
-
-``` bash
-
-```
-
-ENABLE USB-BOOT
-=================
 ``` bash
 ADDR=0x1020000
 ./tools/linux/update write u-boot-script/enable-boot-usb.scr $ADDR
