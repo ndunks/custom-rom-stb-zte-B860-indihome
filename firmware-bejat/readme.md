@@ -25,6 +25,6 @@ Boot device, short R87 on board (to boot u-boot on MMC), also press power to boo
 ```
 
 
-U-boot di MMC sudah diganti, sekarang harusnya kamu bisa flash seperti biasa (tancap USB + power button)
+U-boot di eMMC sudah diganti, sekarang harusnya kamu bisa flash seperti biasa (tancap USB + power button)
 untuk flashing Kernel/ROM
 
