@@ -20,3 +20,10 @@ sudo dd if=u-boot.bin of=/dev/sdc  seek=1 skip=1 bs=512
 
 ## Boot MMC
 Boot device, short R87 on board (to boot u-boot on MMC), also press power to boot USB Burn Mode
+
+## Flash u-boot.emmc.bin to bootloader
+update partition bootloader u-boot.bin
+
+u-boot.sd.bin merupakan u-boot beserta 512 byte pertama (MBR & Partition scheme)
+
+
