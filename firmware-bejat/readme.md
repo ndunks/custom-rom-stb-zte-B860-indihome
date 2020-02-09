@@ -1,29 +1,30 @@
-# USB Burn Mode on Locked Bootloader
+# Enable USB Burn Mode on Locked Bootloader & Disabled Button
 a.k.a Firmware Bejat `U-Boot 2015.01-g3b2d4e2 (Oct 12 2019 - 22:21:44)`
 
-## Prepare MMC
+- u-boot.sd.bin merupakan u-boot bootloader beserta 512 byte pertama (MBR)
+- u-boot.bin merupakan u-boot bootloader tanpa MBR
 
-    Partition Table Type: MBR / msdos
-    First partition start from 2mb
-    Partition format FAT32
+## 1. Persiapkan U-Boot di eksternal MMC
 
+    Warning: Semua data & partisi di MMC akan hilang.
+
+``` bash
+sudo dd if=u-boot.sd.bin of=/dev/sdc
 ```
-# Use GParted
-sudo gparted /dev/sdc
-```
 
-## MBR boot
-sudo dd if=u-boot.bin of=/dev/sdc bs=1 count=442
+    Ganti `sdc` sesuai dengan block-device MMC di PC mu
 
-## u-boot
-sudo dd if=u-boot.bin of=/dev/sdc  seek=1 skip=1 bs=512
+Partisi di MMC tidak akan terbaca, tidak masalah yang penting sudah ada bootloadernya.
 
 ## Boot MMC
 Boot device, short R87 on board (to boot u-boot on MMC), also press power to boot USB Burn Mode
 
-## Flash u-boot.emmc.bin to bootloader
-update partition bootloader u-boot.bin
+## Flash u-boot.bin to bootloader partition on internal eMMC
+``` bash
+./tools/linux/update partition bootloader firmware-bejat/u-boot.bin
+```
 
-u-boot.sd.bin merupakan u-boot beserta 512 byte pertama (MBR & Partition scheme)
 
+U-boot di MMC sudah diganti, sekarang harusnya kamu bisa flash seperti biasa (tancap USB + power button)
+untuk flashing Kernel/ROM
 
