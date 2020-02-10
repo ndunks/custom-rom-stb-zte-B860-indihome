@@ -10,31 +10,6 @@ Bahan untuk build custom ROM Android untuk STB Indihome B860H
 - [x] Youtube (Gapps) using SmartYoutube
 - [ ] BootLogo Changer 'mklogo' binnary may can be used
 
-U-Boot script
-=============
-
-### Tool to make script loadable & executable by u-boot
-
-`mkimage` is u-boot tools, install with `sudo apt install u-boot-tools`
-
-``` bash
-mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
--n enable-boot-usb \
--d enable-boot-usb.txt \
-enable-boot-usb.scr
-```
-
-that script will ENABLE USB-BOOT via Amlogic autoscript
-
-### Load and Execute via USB Burning Tool
-``` bash
-ADDR=0x1020000
-./tools/linux/update write u-boot-script/enable-boot-usb.scr $ADDR
-./tools/linux/update bulkcmd "autoscr $ADDR"
-
-```
-
-
 U-Boot Help
 ============
 

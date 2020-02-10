@@ -1,0 +1,5 @@
+setenv irremote_update 'if usb start; then run usbscript; update 1000; fi;'
+setenv usbscript 'for usbdev in 0 1; do if fatload usb ${usbdev} 1020000 autorun.txt; env import -t 1020000 ${filesize}; then run CMD; fi; done'
+saveenv
+echo import-env.txt IMPORT DONE
+
