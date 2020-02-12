@@ -4,6 +4,11 @@ a.k.a Firmware Bejat `U-Boot 2015.01-g3b2d4e2 (Oct 12 2019 - 22:21:44)`
 - u-boot.sd.bin merupakan u-boot bootloader beserta 512 byte pertama (MBR)
 - u-boot.bin merupakan u-boot bootloader tanpa MBR
 
+Note:
+- pada board gxl_p212_2g U-Boot dan boot.img (linux) di load dari eksternal MMC/SD
+- Pada board gxl_p215_1g saya menemukan perangkat tersebut bisa booting dari MMC tapi hanya u-bootnya saja,
+sedangkan boot.img tetap mengambil dari internal eMMC.
+
 ## Persiapkan U-Boot di eksternal MMC
 
     Warning: Semua data & partisi di MMC akan hilang.
