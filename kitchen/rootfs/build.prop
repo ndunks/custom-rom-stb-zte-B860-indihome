@@ -47,12 +47,12 @@ ro.build.fingerprint=ZTE/B860H_Market1/B860H_V1:6.0.1/MHC19J/20181218.210930:use
 ro.build.characteristics=mbx,nosdcard
 net.zte.refactor=1
 sys.zte.IPTVEnable=0
-sys.zte.GMSEnable=1
-ro.com.google.clientidbase=android-zte-tv
-ro.com.google.clientidbase.am=android-zte-tv
-ro.com.google.clientidbase.gmm=android-zte-tv
-ro.com.google.clientidbase.ms=android-zte-tv
-ro.com.google.clientidbase.yt=android-zte-tv
+sys.zte.GMSEnable=0
+#ro.com.google.clientidbase=android-zte-tv
+#ro.com.google.clientidbase.am=android-zte-tv
+#ro.com.google.clientidbase.gmm=android-zte-tv
+#ro.com.google.clientidbase.ms=android-zte-tv
+#ro.com.google.clientidbase.yt=android-zte-tv
 # end build properties
 #
 # from device/amlogic/p212/system.prop
@@ -67,8 +67,8 @@ ro.camera.preview.LimitedRate=1280x720x30,640x480x30,320x240x28
 ro.camera.preview.UseMJPEG=1
 
 #for bt auto connect
-ro.autoconnectbt.macprefix=DC:2C:26
-ro.autoconnectbt.btclass=2540
+#ro.autoconnectbt.macprefix=DC:2C:26
+#ro.autoconnectbt.btclass=2540
 
 #if wifi Only
 ro.radio.noril=false
@@ -123,7 +123,7 @@ media.decoder.vfm.drmmap=decoder amvideo
 #service.bootvideo=0
 
 # Define drm for this device
-drm.service.enabled=1
+drm.service.enabled=0
 
 #used forward seek for libplayer
 media.libplayer.seek.fwdsearch=1
@@ -159,13 +159,13 @@ persist.service.debuggable=1
 persist.sys.usb.config=adb
 
 #netflix
-ro.nrdp.modelgroup=S905
+#ro.nrdp.modelgroup=S905
 
 #
-dalvik.vm.heapstartsize=16m
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapsize=512m
-dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=127m
+dalvik.vm.heapsize=256m
+dalvik.vm.heaptargetutilization=0.5
 dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=8m
 
@@ -264,7 +264,7 @@ sys.fb.bits=32
 persist.sys.hdmi.keep_awake=false
 wifi.interface=wlan0
 config.disable_bluetooth=false
-drm.service.enable=true
+drm.service.enable=false
 ro.platform.has.pppoe=false
 ro.adb.secure=0
 persist.sys.app.rotation=force_land
