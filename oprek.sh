@@ -48,6 +48,7 @@ rm -f $SYSDIR/app/OSDService.apk
 rm -f $SYSDIR/app/ZeroCfgUI.apk
 rm -f $SYSDIR/app/Dlnagwapt.apk
 rm -f $SYSDIR/app/MSGAPK.apk
+
 rm -f $SYSDIR/app/dlna.apk
 rm -f $SYSDIR/app/MSGAPKSub.apk
 rm -rf $SYSDIR/app/AuthConfig
@@ -66,6 +67,10 @@ rm -rf $SYSDIR/app/DownloadProviderUi
 #rm -f $SYSDIR/app/com.google.android.tts-3.10.10-210310101.apk
 rm -rf $SYSDIR/priv-app/Contacts/
 rm -rf $SYSDIR/priv-app/LiveTv/
+
+#Comment if you want soft keyboard
+rm -rf $SYSDIR/app/LatinIME
+rm -rf $SYSDIR/app/OpenWnn 
 
 echo "Remove Unwanted services"
 rm -f $SYSDIR/bin/netaccess

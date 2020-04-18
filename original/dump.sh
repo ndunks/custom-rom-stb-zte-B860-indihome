@@ -28,12 +28,13 @@ PARTITIONS=( \
 for line in "${PARTITIONS[@]}"; do
     set -- $line
     FILE="$2.img";
+    PART="$2";
     SIZE="0x$1";
     printf "$FILE... ";
     if [ -f $FILE ]; then
         echo "Exists, skipped."
     else
-        $UPDATE_BIN mread store boot normal $SIZE $FILE
+        $UPDATE_BIN mread store $PART normal $SIZE $FILE
         echo "OK"
     fi
 done
