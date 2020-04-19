@@ -84,6 +84,8 @@ popd
 # Fix data permissions, its changed after checkout from git
 chmod -R og+rw kitchen/rootfs/data_default/data/*
 chmod -R og-rw kitchen/rootfs/data_default/data/eu.chainfire.supersu/files/*
+chmod -R +x kitchen/rootfs/xbin/*
+chmod -R +x kitchen/rootfs/bin/*
 
 echo 'Merge rootfs/* into $SYSDIR/*'
 cp -pruv kitchen/rootfs/* $SYSDIR/
