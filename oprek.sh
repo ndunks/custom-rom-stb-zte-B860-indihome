@@ -74,12 +74,12 @@ rm -rf $SYSDIR/app/OpenWnn
 
 echo "Remove Unwanted services"
 rm -f $SYSDIR/bin/netaccess
-#rm -f $SYSDIR/bin/depconfig
+rm -f $SYSDIR/bin/depconfig
 
 echo "Bootanimation"
 pushd kitchen/bootanimation
 [ -e ../rootfs/media/bootanimation.zip ] && sudo rm ../rootfs/media/bootanimation.zip
-sudo zip -r '../rootfs/media/bootanimation.zip' *
+sudo zip -0 -r '../rootfs/media/bootanimation.zip' *
 popd
 # Fix data permissions, its changed after checkout from git
 chmod -R og+rw kitchen/rootfs/data_default/data/*
