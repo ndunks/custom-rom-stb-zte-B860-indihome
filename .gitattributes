@@ -2,4 +2,5 @@
 *.apk binary
 *.7z.* binary
 *.bin binary
+*.zip binary
 
