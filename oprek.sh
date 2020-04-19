@@ -33,24 +33,24 @@ rm -f $SYSDIR/app/ZTEPlayer.apk
 
 rm -f $SYSDIR/app/VideoTestTool.apk
 rm -rf $SYSDIR/app/QuickSearchBox
-rm -rf $SYSDIR/app/NetworkTest
-rm -rf $SYSDIR/app/ztehelper
+#rm -rf $SYSDIR/app/NetworkTest
+#rm -rf $SYSDIR/app/ztehelper
 rm -rf $SYSDIR/app/HomeMediaCenter
 
 rm -f $SYSDIR/app/IPTV.apk
-rm -f $SYSDIR/app/mcspbase.apk
-rm -f $SYSDIR/app/NaAgent.apk
-rm -f $SYSDIR/app/netmanager.apk
-rm -f $SYSDIR/app/nmAssistant.apk
+#rm -f $SYSDIR/app/mcspbase.apk
+#rm -f $SYSDIR/app/NaAgent.apk
+#rm -f $SYSDIR/app/netmanager.apk
+#rm -f $SYSDIR/app/nmAssistant.apk
 
 # Cleann!
 rm -f $SYSDIR/app/OSDService.apk
 rm -f $SYSDIR/app/ZeroCfgUI.apk
 rm -f $SYSDIR/app/Dlnagwapt.apk
-rm -f $SYSDIR/app/MSGAPK.apk
+#rm -f $SYSDIR/app/MSGAPK.apk
 
-rm -f $SYSDIR/app/dlna.apk
-rm -f $SYSDIR/app/MSGAPKSub.apk
+#rm -f $SYSDIR/app/dlna.apk
+#rm -f $SYSDIR/app/MSGAPKSub.apk
 rm -rf $SYSDIR/app/AuthConfig
 rm -rf $SYSDIR/app/SubtitleService
 rm -rf $SYSDIR/app/FileBrowser
@@ -60,7 +60,7 @@ rm -f $SYSDIR/app/launcher_tkz4.apk
 
 # Must removed if using GAPPS TV
 rm -f $SYSDIR/app/TVClient.apk
-rm -rf $SYSDIR/app/ADBSetting
+#rm -rf $SYSDIR/app/ADBSetting
 rm -rf $SYSDIR/app/Camera2
 rm -rf $SYSDIR/app/Music
 rm -rf $SYSDIR/app/DownloadProviderUi
@@ -73,8 +73,8 @@ rm -rf $SYSDIR/app/LatinIME
 rm -rf $SYSDIR/app/OpenWnn 
 
 echo "Remove Unwanted services"
-rm -f $SYSDIR/bin/netaccess
-rm -f $SYSDIR/bin/depconfig
+#rm -f $SYSDIR/bin/netaccess
+#rm -f $SYSDIR/bin/depconfig
 
 echo "Bootanimation"
 pushd kitchen/bootanimation
