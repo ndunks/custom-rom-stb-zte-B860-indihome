@@ -33,24 +33,24 @@ rm -f $SYSDIR/app/ZTEPlayer.apk
 
 rm -f $SYSDIR/app/VideoTestTool.apk
 rm -rf $SYSDIR/app/QuickSearchBox
-#rm -rf $SYSDIR/app/NetworkTest
-#rm -rf $SYSDIR/app/ztehelper
+rm -rf $SYSDIR/app/NetworkTest
+rm -rf $SYSDIR/app/ztehelper
 rm -rf $SYSDIR/app/HomeMediaCenter
 
 rm -f $SYSDIR/app/IPTV.apk
-#rm -f $SYSDIR/app/mcspbase.apk
-#rm -f $SYSDIR/app/NaAgent.apk
-#rm -f $SYSDIR/app/netmanager.apk
-#rm -f $SYSDIR/app/nmAssistant.apk
+rm -f $SYSDIR/app/mcspbase.apk
+rm -f $SYSDIR/app/NaAgent.apk
+rm -f $SYSDIR/app/netmanager.apk
+rm -f $SYSDIR/app/nmAssistant.apk
 
 # Cleann!
 rm -f $SYSDIR/app/OSDService.apk
 rm -f $SYSDIR/app/ZeroCfgUI.apk
 rm -f $SYSDIR/app/Dlnagwapt.apk
-#rm -f $SYSDIR/app/MSGAPK.apk
+rm -f $SYSDIR/app/MSGAPK.apk
 
-#rm -f $SYSDIR/app/dlna.apk
-#rm -f $SYSDIR/app/MSGAPKSub.apk
+rm -f $SYSDIR/app/dlna.apk
+rm -f $SYSDIR/app/MSGAPKSub.apk
 rm -rf $SYSDIR/app/AuthConfig
 rm -rf $SYSDIR/app/SubtitleService
 rm -rf $SYSDIR/app/FileBrowser
@@ -68,22 +68,25 @@ rm -f $SYSDIR/app/com.google.android.tts-3.10.10-210310101.apk
 rm -rf $SYSDIR/priv-app/Contacts/
 rm -rf $SYSDIR/priv-app/LiveTv/
 
-#Comment if you want soft keyboard
-rm -rf $SYSDIR/app/LatinIME
-rm -rf $SYSDIR/app/OpenWnn 
+#Uncomment if you want use hardware keyboard only (no softkeyboard)
+#rm -rf $SYSDIR/app/LatinIME
+#rm -rf $SYSDIR/app/OpenWnn 
 
 echo "Remove Unwanted services"
-#rm -f $SYSDIR/bin/netaccess
-#rm -f $SYSDIR/bin/depconfig
+rm -f $SYSDIR/bin/netaccess
+rm -f $SYSDIR/bin/depconfig
 
 echo "Bootanimation"
 pushd kitchen/bootanimation
 [ -e ../rootfs/media/bootanimation.zip ] && sudo rm ../rootfs/media/bootanimation.zip
+[ -d ../rootfs/media ] || mkdir ../rootfs/media
 sudo zip -0 -r '../rootfs/media/bootanimation.zip' *
 popd
+
+echo "Coying default data"
+[ -d kitchen/rootfs/data_default ] || mkdir -p kitchen/rootfs/data_default/data
 # Fix data permissions, its changed after checkout from git
 chmod -R og+rw kitchen/rootfs/data_default/data/*
-chmod -R og-rw kitchen/rootfs/data_default/data/eu.chainfire.supersu/files/*
 chmod -R +x kitchen/rootfs/xbin/*
 chmod -R +x kitchen/rootfs/bin/*
 
